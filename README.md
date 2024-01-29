@@ -48,4 +48,40 @@ Finally you will be shown a summary of the settings you configured. Click "Finis
 
 ## OS Installation
 
-VirtualBox will automatically install the OS when following the steps outlined above. However, you may run into an error screen during installation. 
+VirtualBox will automatically install the OS when following the steps outlined above. However, you may run into an error screen during installation.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/c3a11808-e035-4365-bf1e-944697f380c6)
+
+This error can be safely ignored. With the VM window focused, you can press `Enter` on your keyboard to continue with installation, and soon afterward the VM will automatically restart once OS installation finishes.
+
+You'll then get a prompt asking you to login with the root user details we specified previously. If you've reached this screen, you're done!
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/e62968b1-4397-4c1f-8458-902924b720b6)
+
+## FAQ
+
+**Q: How do I shut down the VM from the command line?**  
+A: You can use either the command `sudo poweroff` or `sudo shutdown -h now` to immediately perform a graceful power off of the machine.
+
+**Q: I'm running into an error: `"user is not in the sudoers file"`, how can I fix this?**  
+A: VirtualBox by default doesn't add your user specified in the VM configuration screens to the sudoers file, and so you need to do this manually. Here's the steps to accomplish this assuming `vboxuser` and `changeme` are the username and password you used when configuring your new VM:
+
+First, change to the root user with:
+
+```bash
+su -
+```
+
+You will be prompted to enter a password. It will be the same as the password yo set for `vboxuser` during VM configuration.
+
+Next, add the user you'd like give sudo permissions to with the following command:
+  
+```bash
+sudo adduser vboxuser sudo
+```
+
+Finally, to switch back to this user (instead of continuing as the `root` user), enter the following:
+  
+```bash
+su vboxuser
+```
