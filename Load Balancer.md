@@ -47,6 +47,10 @@ At this point we can shut down the VM and create two clones of it. We'll name th
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/4cf777e0-b0c2-4755-86c1-33511119a454)
 
+Next, we also need to configure our Load Balancer VM to be accessible by the Host OS. To do this, we'll open its settings and add a second adapter under the Network tab, choosing `Host-only Adapter` from the attach list, pictured below:
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/e5270652-d79a-4dc2-9183-5c259a755272)
+
 Now, start all three VMs we've created as they will all need to be running at the same time for everything to work.
 
 ## Configuring Nginx on each VM
@@ -114,5 +118,6 @@ With these steps completed on both servers, we'll need to go back to our Load Ba
 
 Assuming you didn't run into any unexpected errors along the way, you should now have a minimal working load balancer! Below is a screenshot of the result in action:
 
-![image](https://github.com/Saeris/cne-370/assets/3144549/804feeb6-97e0-4ddf-8076-12c265a3226f)
+![image](https://github.com/Saeris/cne-370/assets/3144549/4005a3ba-1ecf-4597-985b-bd67c59d476f)
+
 
