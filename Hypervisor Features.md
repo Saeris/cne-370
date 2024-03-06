@@ -40,27 +40,47 @@ Exporting can be started one of two ways:
 
      ![image](https://github.com/Saeris/cne-370/assets/3144549/61dcc700-8f62-4482-a665-ecc894da5ae4)
 
-This will bring up the Export Virtual Appliance wizard
+This will bring up the Export Virtual Appliance wizard. Here you can choose the format, name the output file, and choose how to handle hardward MAC addresses for the network adapters of the VM.
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/4f6f7681-14f9-4b7b-9547-68416e8a6d9e)
+
+After choosing the settings you want, you'll be presnted with a review screen. Clicking Finish will begin the export process.
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/4551bab8-2f78-4bc6-a39e-cb9b51e19022)
 
 ## Importing an Appliance in OVF Format
 
+To import one of the above files, go to the File menu and choose `Import Appliance...` from the menu.
+
 ![image](https://github.com/Saeris/cne-370/assets/3144549/7b2b355e-d66b-4a27-bd55-123a6f58c7e1)
+
+This will open the Import wizard, where you will be prompted to choose the appliance file you would like to import.
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/d0cff5c7-dc6e-440c-af1d-501fa7803d58)
 
+After selecting a file and clicking Next, you will be shown an overivew of the VM's settings, as well as some options such as where to save the new VM to and configure MAC addresses.
+
 ![image](https://github.com/Saeris/cne-370/assets/3144549/9a50f4d7-fccf-425a-b609-c84ea99d06a8)
+
+Click Finish and then your newly imported VM will appear in the list in the main application window.
 
 # Snapshots
 
+Snapshots are a useful way to jump back to a previous state that a running VM was in at the time the snapshot was taken. In the following examples, we're going to take a snapshot in the middle of a game of Solitaire, whch we can reload later if for some reason we were to lose that game.
+
 ## Take
+
+To take a snapshot, either go to the Machine menu while the VM is running and select `Take Snapshot...` from the list of options, or press `Host + T` (`Host` is the right-hand `Ctrl` key on your keyboard).
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/6e029f52-829e-44e5-bcc5-e71b15647d5d)
 
+A dialog will come up prompting you to name your snapshot and give it an optional description to help remind you why you took it later on.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/f48776cb-00ff-47f1-8d2a-3bbd6f9040a1)
+
 ## Restore
+
+
 
 ![image](https://github.com/Saeris/cne-370/assets/3144549/d69909ac-19bd-4851-bd38-13839e43706d)
 
