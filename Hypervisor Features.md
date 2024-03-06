@@ -73,3 +73,22 @@ This will bring up the Export Virtual Appliance wizard
 # Clipboards
 
 ## Copying and Pasting from Host OS to Guest OS
+
+To enable copying and pasting between the the Host and the VM, a little extra setup is involved.
+
+With your VM running (this example uses Ubuntu 22.04, step may vary for another OS), you will need to go to the Devices menu and select `Insert Guest Additions CD Image...`, which will mount a virtual CD inside your VM. On Ubuntu, this will come up on the left-hand sidebar as an icon of a CD, which you can click to open and see it's contents.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/be3f4610-d514-45df-86ea-e35004ac6a9c)
+
+From that folder, you can right-click on the `autorun.sh` file and select `Run as Program` from the list of options. This will open a terminal window and execute a script.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/22aa648b-dea7-4037-b6a4-edcdb54a6a68)
+
+When it completes, you will need to reboot the VM before continuing. However, in writing this tutorial I ran into issues with screen tearing after this script completed running. So to fix this issue, shut down the VM instead and open the machine settings menu. From there, go to the `Display` tab and set the Video Memory to a value other than it's default 16mb (I chose the max value here), switch the Graphics Controller to `VMSVGA` and check `Enabled 3D Acceleration`, as pictured below.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/a6def780-ca50-4e22-bd18-0746d9504078)
+
+Once you restart the VM, go to the Devices menu again and select one of the options from the `Shared Clipboard` submenu. If you don't know which to choose, `Bidirectional` will likely behave in the way you are most expecting copy and paste should.
+
+![image](https://github.com/Saeris/cne-370/assets/3144549/cf80a23e-d676-4bbe-b1bc-6b3d264cda0d)
+
